@@ -1,0 +1,10 @@
+{
+    "program": "average_games.aleo",
+    "version": "0.0.0",
+    "description": "",
+    "development": {
+        "private_key": "APrivateKey1zkpHoCVn21oLSS1aCeuBMyzRb9FUWFh9NVzJUsCUQYJ9i2W",
+        "address": "aleo1dwa5ksafcse6evwl5lkyf2a70668vw7let40d9npz5uscfv70crqp6650m"
+    },
+    "license": "MIT"
+}
