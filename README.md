@@ -61,11 +61,18 @@ Bid =>   {
 	is_winner: bool,
 }
 
+
 `owner: address,`【Event address】
+
 `gates: u64,`【commission】
+
 `bidder: address,`【Player Address】
+
 `amount: u64,`【Number of participants/players】
+
 `place: u64,`【Guess value】
+
 `totel: u64,`【total】
+
 `is_winner: bool,`【Win or not (this value will be updated when the game ends)】
 
