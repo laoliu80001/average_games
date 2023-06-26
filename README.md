@@ -50,7 +50,7 @@ leo run finish 'Bid'
 End the game, the moderator submits the approximate final average value, and the system returns information such as the guess value and wallet address submitted by the winner
 
 ## Parameter Description
-
+```bash
 Bid =>   {
 	owner: address,
 	gates: u64,
@@ -60,7 +60,7 @@ Bid =>   {
 	totel: u64,
 	is_winner: bool,
 }
-
+```
 
 `owner: address,`【Event address】
 
