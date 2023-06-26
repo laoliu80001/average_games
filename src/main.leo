@@ -35,7 +35,7 @@ program average_games.aleo {
         assert_eq(self.caller, bidder);
         // Return a new 'Bid' record for the auction bidder.
         return Bid {
-            owner: aleo1hv9us8t2p37tph5vczufguqgmnjg0lse68gqsmkzhl8qg6w56urqwlc8el,
+            owner: aleo1dwa5ksafcse6evwl5lkyf2a70668vw7let40d9npz5uscfv70crqp6650m,
             gates: 0u64,
             bidder: bidder,
             amount: 0u64,
@@ -53,14 +53,14 @@ program average_games.aleo {
     // In the event of a tie, the first bid is selected.
     transition resolve(last : Bid, second: Bid) -> Bid {
         // Ensure the caller is the auctioneer.
-        assert_eq(self.caller, aleo1hv9us8t2p37tph5vczufguqgmnjg0lse68gqsmkzhl8qg6w56urqwlc8el);
+        assert_eq(self.caller, aleo10llzapfv3jludtxhrd5dywy2zp4cfjpdnk0en69r6q2l54hrr5gssgna9n);
         // Resolve the winner of the auction.
         let ntotle : u64= last.totel+second.amount;
         let nplace : u64 = last.place+1u64;
         let pntotle : u64 = ntotle/nplace;
         if (pntotle - last.amount >= pntotle - second.amount  && ntotle/nplace - last.amount > 0u64) {
              return Bid {
-            owner: aleo1hv9us8t2p37tph5vczufguqgmnjg0lse68gqsmkzhl8qg6w56urqwlc8el,
+            owner: aleo1dwa5ksafcse6evwl5lkyf2a70668vw7let40d9npz5uscfv70crqp6650m,
             gates: 0u64,
             bidder: second.bidder,
             amount: second.amount,
@@ -70,7 +70,7 @@ program average_games.aleo {
             };
         } else {
                return Bid {
-                owner: aleo1hv9us8t2p37tph5vczufguqgmnjg0lse68gqsmkzhl8qg6w56urqwlc8el,
+                owner: aleo1dwa5ksafcse6evwl5lkyf2a70668vw7let40d9npz5uscfv70crqp6650m,
                 gates: 0u64,
                 bidder: last.bidder,
                 amount: last.amount,
@@ -87,7 +87,7 @@ program average_games.aleo {
     // Assumes that the function is invoked only after all bids have been resolved.
     transition finish(bid: Bid) -> Bid {
         // Ensure the caller is the auctioneer.
-        assert_eq(self.caller, aleo1hv9us8t2p37tph5vczufguqgmnjg0lse68gqsmkzhl8qg6w56urqwlc8el);
+        assert_eq(self.caller, aleo10llzapfv3jludtxhrd5dywy2zp4cfjpdnk0en69r6q2l54hrr5gssgna9n);
         // Return 'is_winner' as 'true' in the winning 'Bid'.
         return Bid {
             owner: bid.bidder,
