@@ -52,12 +52,20 @@ End the game, the moderator submits the approximate final average value, and the
 ## Parameter Description
 
 Bid =>   {
-	`owner: address,`【Event address】
-	`gates: u64,`【commission】
-	`bidder: address,`【Player Address】
-	`amount: u64,`【Number of participants/players】
-	`place: u64,`【Guess value】
-	`totel: u64,`【total】
-	`is_winner: bool,`【Win or not (this value will be updated when the game ends)】
+	owner: address,
+	gates: u64,
+	bidder: address,
+	amount: u64,
+	place: u64,
+	totel: u64,
+	is_winner: bool,
 }
+
+`owner: address,`【Event address】
+`gates: u64,`【commission】
+`bidder: address,`【Player Address】
+`amount: u64,`【Number of participants/players】
+`place: u64,`【Guess value】
+`totel: u64,`【total】
+`is_winner: bool,`【Win or not (this value will be updated when the game ends)】
 
